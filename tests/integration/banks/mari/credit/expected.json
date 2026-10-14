@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "bank": "mari",
+  "statement_type": "credit",
+  "period_start": "2024-12-21",
+  "period_end": "2025-01-20",
+  "payment_summary": {
+    "payment_due_date": null,
+    "total_amount_due": null,
+    "minimum_payment": null
+  },
+  "balances": [],
+  "transactions": [
+    {
+      "id": "e125dcd82f7a9672071ac0fb4e3161d4a725885c2a5bc8ea4baf6ee3ee2499b3",
+      "transaction_date": "2024-12-27",
+      "posting_date": "2024-12-27",
+      "description": "SAMPLE CARDHOLDER Repayment",
+      "amount": 20.0,
+      "currency": "SGD",
+      "account": "1234",
+      "balance": null,
+      "direction": "credit"
+    },
+    {
+      "id": "20f36dc62739a304cca89ddc8216cd654a8f518653ecbe0a4838dab221b0468f",
+      "transaction_date": "2024-12-31",
+      "posting_date": "2025-01-02",
+      "description": "EXAMPLE BOOKSTORE Instant Checkout",
+      "amount": -50.0,
+      "currency": "SGD",
+      "account": "1234",
+      "balance": null,
+      "direction": "debit"
+    },
+    {
+      "id": "81593220a392d14e25863de29a3fa9fc3add28d489b3cfdf3e041c48ddaa71df",
+      "transaction_date": "2025-01-04",
+      "posting_date": "2025-01-05",
+      "description": "EXAMPLE GROCER Instant Checkout",
+      "amount": -25.0,
+      "currency": "SGD",
+      "account": "1234",
+      "balance": null,
+      "direction": "debit"
+    }
+  ]
+}

@@ -22,6 +22,7 @@ Supported banks:
 | Citibank                               | ✅                 | ❌                   |
 | DBS/POSB                               | ✅                 | ✅                   |
 | HSBC                                   | ✅                 | ❌                   |
+| MariBank (Singapore)                   | ✅                 | ❌                   |
 | Maybank                                | ✅                 | ✅                   |
 | OCBC                                   | ✅                 | ✅                   |
 | Royal Bank of Canada (RBC)             | ✅                 | ✅                   |
@@ -110,6 +111,21 @@ python3 src/monopoly/examples/single_statement.py
 - Supports adding OCR for image-based bank statements.
 - Provides a generic parser that can be used without any predefined configuration (caveat emptor).
 - Includes a safety check (enabled by default) that validates totals for debit or credit statements.
+
+### MariBank credit statements
+
+MariBank Singapore credit card PDFs are detected automatically (`--bank Mari`
+can also select the parser explicitly). The parser supports the signed-SGD,
+two-date transaction table and nine-column statement summary layout. It keeps
+transaction and posting dates separately in JSON, the card's last four digits,
+and checkout/repayment details in the description. CSV uses the standard
+Monopoly transaction-date schema; use JSON when posting dates are needed.
+
+Activity debit and credit totals must match the statement summary. Unsupported
+summary layouts or missing merchant descriptions fail extraction rather than
+silently producing a partial export. The initial implementation was checked
+locally against a December 2024 PDF; newer layouts still need verification.
+Statement section headings and payment-summary fields are not exported yet.
 
 ## Development
 

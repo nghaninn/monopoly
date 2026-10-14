@@ -26,7 +26,9 @@ def select_statement(parser: "PdfParser") -> BaseStatement:
     for config, header in bank.statement_candidates(parser):
         if header:
             logger.debug("Statement type detected: %s", config.statement_type)
-            statement_class = STATEMENT_CLASSES[config.statement_type]
+            # Banks with layout-specific processing or reconciliation may opt
+            # into their own statement classes; all existing banks use defaults.
+            statement_class = getattr(bank, "statement_classes", STATEMENT_CLASSES)[config.statement_type]
             return statement_class(parser.pages, bank.name, config, header, parser.file_path)
 
     msg = "Could not find header in statement"

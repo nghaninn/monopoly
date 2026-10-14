@@ -1,0 +1,18 @@
+MARI CREDIT CARD STATEMENT
+21 JAN 2025
+TRANSACTION DETAILS
+POSTED DATE   TRANSACTION DATE   DESCRIPTION                     AMOUNT (SGD)
+                            -Repayment-
+27 DEC        27 DEC            SAMPLE CARDHOLDER                     +20.00
+                                Repayment
+
+                             -Purchase-
+                                EXAMPLE BOOKSTORE
+02 JAN        31 DEC                                                  -50.00
+                                Instant Checkout
+
+05 JAN        04 JAN            EXAMPLE GROCER                        -25.00
+                                Instant Checkout
+
+General
+This statement serves as a synthetic layout fixture.
